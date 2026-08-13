@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --agpr-cream: #fafaf8;
+  --agpr-lime: #c5e84a;
+  --agpr-green: #4caf50;
+  --agpr-green-dark: #2e7d32;
+  --agpr-forest: #1b3d1b;
+  --agpr-splash: #7cb342;
+  --background: var(--agpr-cream);
+  --foreground: var(--agpr-forest);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-agpr-cream: var(--agpr-cream);
+  --color-agpr-lime: var(--agpr-lime);
+  --color-agpr-green: var(--agpr-green);
+  --color-agpr-green-dark: var(--agpr-green-dark);
+  --color-agpr-forest: var(--agpr-forest);
+  --color-agpr-splash: var(--agpr-splash);
+  --font-display: var(--font-bebas);
+  --font-body: var(--font-nunito);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-bebas), system-ui, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Splash décoratif street-art */
+.splash-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400' opacity='0.08'%3E%3Cellipse cx='120' cy='80' rx='90' ry='60' fill='%234CAF50'/%3E%3Cellipse cx='680' cy='120' rx='70' ry='45' fill='%23C5E84A'/%3E%3Cellipse cx='400' cy='300' rx='110' ry='70' fill='%232E7D32'/%3E%3Cpath d='M50 200 Q100 150 150 200 T250 200' stroke='%237CB342' stroke-width='8' fill='none' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-divider {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--agpr-lime) 20%,
+    var(--agpr-green) 50%,
+    var(--agpr-green-dark) 80%,
+    transparent
+  );
+  opacity: 0.6;
+}
+
+/* Focus visible pour accessibilité */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--agpr-green);
+  outline-offset: 2px;
+}
+
+/* Animation légère partenaires */
+@keyframes scroll-partners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partners-track {
+  animation: scroll-partners 40s linear infinite;
+}
+
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .partners-track {
+    animation: none;
+  }
+}
