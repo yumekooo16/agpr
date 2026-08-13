@@ -47,6 +47,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/logo-agpr.png", type: "image/png" }],
+    apple: [{ url: "/logo-agpr.png", type: "image/png" }],
+  },
   openGraph: {
     title: "AGPR — Agir Pour Réussir",
     description:
