@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Nunito } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
 import ServiceWorkerCleanup from "@/components/ServiceWorkerCleanup";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://agpr.vercel.app";
+const siteUrl = getSiteUrl();
 
 const bebas = Bebas_Neue({
   weight: "400",

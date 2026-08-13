@@ -1,4 +1,6 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://agpr.vercel.app";
+import { getSiteUrl } from "@/lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 const organizationSchema = {
   "@context": "https://schema.org",
