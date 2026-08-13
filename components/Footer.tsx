@@ -84,6 +84,10 @@ export default function Footer() {
               Mentions légales
             </a>
           </p>
+          <p className="mt-2 text-white/40">
+            Site réalisé par{" "}
+            <span className="font-semibold text-agpr-lime/80">Wyatt</span>
+          </p>
         </div>
       </div>
 
