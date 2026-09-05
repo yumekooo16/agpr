@@ -1,12 +1,30 @@
 import { partners } from "@/data/partners";
 
 const cardClassName =
-  "group flex h-20 w-40 shrink-0 items-center justify-center rounded-xl border border-agpr-green/20 bg-agpr-cream px-4 transition-all hover:border-agpr-green hover:shadow-md";
+  "group flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-agpr-green/20 bg-agpr-cream px-4 py-3 transition-all hover:border-agpr-green hover:shadow-md sm:h-28 sm:w-52";
 
-const labelClassName =
-  "text-center font-display text-base text-agpr-green-dark transition-colors group-hover:text-agpr-green sm:text-lg";
+function PartnerCard({
+  name,
+  logo,
+  url,
+}: {
+  name: string;
+  logo: string;
+  url?: string;
+}) {
+  const image = (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={logo}
+      alt={name}
+      width={180}
+      height={80}
+      className="max-h-14 w-auto max-w-full object-contain sm:max-h-16"
+      loading="lazy"
+      decoding="async"
+    />
+  );
 
-function PartnerCard({ name, url }: { name: string; url?: string }) {
   if (url) {
     return (
       <a
@@ -16,14 +34,14 @@ function PartnerCard({ name, url }: { name: string; url?: string }) {
         className={cardClassName}
         aria-label={`Partenaire : ${name}`}
       >
-        <span className={labelClassName}>{name}</span>
+        {image}
       </a>
     );
   }
 
   return (
     <div className={cardClassName} aria-label={`Partenaire : ${name}`}>
-      <span className={labelClassName}>{name}</span>
+      {image}
     </div>
   );
 }
@@ -55,6 +73,7 @@ export default function Partners() {
               <PartnerCard
                 key={`${partner.id}-${i}`}
                 name={partner.name}
+                logo={partner.logo}
                 url={partner.url}
               />
             ))}

@@ -30,9 +30,10 @@ npm start
 | Fichier | Contenu |
 |---------|---------|
 | `data/news.ts` | Actualités et événements |
-| `data/partners.ts` | Partenaires |
+| `data/partners.ts` | Partenaires (noms, URLs, logos) |
 | `data/actions.ts` | Axes d'action |
 | `public/images/` | Photos de l'association |
+| `public/images/partners/` | Logos des partenaires |
 | `public/logo-agpr.png` | Logo |
 
 ## SEO
