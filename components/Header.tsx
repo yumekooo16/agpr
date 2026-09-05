@@ -8,7 +8,6 @@ const navLinks = [
   { href: "#qui-sommes-nous", label: "Qui sommes-nous" },
   { href: "#nos-actions", label: "Nos actions" },
   { href: "#galerie", label: "Galerie" },
-  { href: "#actualites", label: "Actualités" },
   { href: "#nous-rejoindre", label: "Nous rejoindre" },
   { href: "#contact", label: "Contact" },
 ];
