@@ -29,7 +29,6 @@ npm start
 
 | Fichier | Contenu |
 |---------|---------|
-| `data/news.ts` | Actualités et événements |
 | `data/partners.ts` | Partenaires (noms, URLs, logos) |
 | `data/actions.ts` | Axes d'action |
 | `public/images/` | Photos de l'association |
@@ -53,4 +52,5 @@ NEXT_PUBLIC_SITE_URL=https://votre-domaine.fr
 ## Contact
 
 - Email : asso.agirpourreussir@gmail.com
-- Facebook : [@associationAgirpourreussir](https://www.facebook.com/associationAgirpourreussir)
+- Instagram : [@agpr.95](https://www.instagram.com/agpr.95)
+- TikTok : [@agpr_asso](https://www.tiktok.com/@agpr_asso)

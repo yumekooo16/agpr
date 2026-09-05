@@ -12,7 +12,6 @@ const organizationSchema = {
   description:
     "Association loi 1901 à Cergy promouvant la citoyenneté, le lien social et la réussite des jeunes du quartier des Linandes.",
   email: "asso.agirpourreussir@gmail.com",
-  telephone: "+33788681139",
   address: {
     "@type": "PostalAddress",
     streetAddress: "6 rue du Ponceau",
@@ -24,7 +23,10 @@ const organizationSchema = {
     "@type": "City",
     name: "Cergy",
   },
-  sameAs: ["https://www.facebook.com/associationAgirpourreussir"],
+  sameAs: [
+    "https://www.instagram.com/agpr.95",
+    "https://www.tiktok.com/@agpr_asso",
+  ],
 };
 
 export default function JsonLd() {
